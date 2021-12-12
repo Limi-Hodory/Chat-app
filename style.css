@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+
+}
+body{
+    background-color: hsl(270, 20%, 96%);
+    /* try- flex col */
+
+
+}
+
+.background_shapes{
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+
+}
+.shape-1{
+    background-image: linear-gradient(to bottom, hsl(293, 73%, 36%), hsl(264, 100%, 61%));
+    border-radius:0px 0px 200px 170px;  
+    
+}
+.shape-2{
+    border-radius:200px 170px 0px 0px; 
+    background: rgba(235, 209, 243, 0.4);
+    right: 0;
+    bottom: 0%;
+}
+/* End of background */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 10%;
+    margin: auto;
+    /* position: relative; */
+
+}
+.instructions{
+    flex-basis: 30%;
+    display: block;
+    /* align-items: center; */
+    /* justify-content: flex-start; */
+    text-align: justify;
+
+}
+
+.phone_screen{
+    background-color: hsl(270, 20%, 96%); 
+    width: 260px;
+    height: 500px;
+    border-radius: 35px;
+    border-color: white;
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    position: relative; /*for the msg */
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+
+
+.phone_screen-msg{
+
+background-color: hsl(300, 21%, 88%);
+margin-bottom: 10px;
+font-size: 14px;
+border-radius: 10px;
+width: 80%;
+text-align: left;
+
+}
+
+.phone_screen_top{
+
+    background-image: linear-gradient(to left, hsl(293, 51%, 53%), hsl(264, 94%, 67%));
+    border-radius: 25px 25px 10px 10px;
+    margin-bottom: 10px;
+    height: 70px;
+   
+    
+ 
+}
+
+/* .phone_screen_top h3::before{
+    content:' ';
+    background:  url('/images/avatar.jpg'); 
+    height: 10px;
+    width: 10px;
+} */
+div .client-msg{
+    background-color: white;
+    width: 65%;
+    /* position: absolute;
+    right: 0; */
+}
+.phone_screen-bid{
+    background-image: linear-gradient(to right, hsl(293, 60%, 55%), hsl(264, 84%, 63%));
+    border-radius: 10px;
+    height: 30px;
+    width: 85%;
+}
+input[type="text"]{
+    border-radius: 30px;
+    height: 35px;
+    margin-top: 10px;
+    border: none;
+    position: absolute;
+    bottom: 2%;
+    left: 3%;
+    width: 225px;
+ }
