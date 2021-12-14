@@ -24,26 +24,40 @@
   
   <div class="container">
     <div class="phone_screen">
+      <!-- <div class="phone_screen_white-shape"> </div> -->
       <div class="phone_screen_top">
-        <!-- <img src="/images/avatar.jpg" alt="profile picture"> -->
-        <h3>Samuel Green </h3> 
+        <h4> < </h4>
+        <img class="profile-pic" src="/images/avatar.jpg" alt="profile picture">
+        <!-- <div class="phone_screen_white-shape"> </div> -->
+        <div class="phone_screen_top-headline ">
+          <h3>Samuel Green </h3> 
         <h6>Available to Walk </h6>
+        </div>
+        <!-- <h3>Samuel Green </h3> 
+        <h6>Available to Walk </h6> -->
       </div>
       <div class="phone_screen-msg">  That sounds great. I’d be happy with that. </div>
       <div class="phone_screen-msg">  Could you send over some pictures of your dog, please?</div>
-      <div>  </div>
-      <div class="phone_screen-msg client-msg"> Here are a few pictures. She’s a happy girl! </div>
+      <div class="img-client_msg"> <!--phone_screen-msg client-msg-->
+        <img src="images/dog-image-1.jpg" alt="dog1">
+        <img src="images/dog-image-2.jpg" alt="dog2">
+        <img src="images/dog-image-3.jpg" alt="dog3">
+      </div>
+      <div class="phone_screen-msg client-msg">  Here are a few pictures. She’s a happy girl! </div>
       <div class="phone_screen-msg client-msg"> Can you make it?</div>
       <div class="phone_screen-msg"> She looks so happy! The time we discussed works. How long shall I take her out for?</div>
-      <div class="phone_screen-bid">  30 minute walk
-        $29 </div>
-      <div class="phone_screen-bid">1 hour walk
-        $49 </div>
-        <input type="text" id="fname" name="fname" placeholder="Type a message…" ><br><br>
+      <div class="phone_screen-msg phone_screen-price half-hour">  30 minute walk </div>
+      <div class="phone_screen-msg phone_screen-price hour">1 hour walk </div>
+      <div class="input_container">  
+        <input type="text" id="fname" name="fname" placeholder="Type a message…" > 
+        <button type="submit" value="Send" placeholder=">"> > </button> <br><br>
+      </div>
+      
     </div>
- 
+  
     <div class="instructions">
       <h1>  Simple booking </h1>
+      <br>
       <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
         discuss arrangements and make bookings. Once the walk has been completed you can rate 
         your walker and book again all through the chat.  </p>

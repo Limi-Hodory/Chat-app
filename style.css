@@ -9,9 +9,6 @@
 }
 body{
     background-color: hsl(270, 20%, 96%);
-    /* try- flex col */
-
-
 }
 
 .background_shapes{
@@ -40,30 +37,25 @@ body{
     justify-content: center;
     flex-basis: 10%;
     margin: auto;
-    /* position: relative; */
+    position: relative;
 
 }
-.instructions{
-    flex-basis: 30%;
-    display: block;
-    /* align-items: center; */
-    /* justify-content: flex-start; */
-    text-align: justify;
 
-}
 
 .phone_screen{
     background-color: hsl(270, 20%, 96%); 
-    width: 260px;
-    height: 500px;
+    width: 330px;
+    height: 610px;
     border-radius: 35px;
     border-color: white;
     border-style: solid;
     border-width: 10px 10px 10px 10px;
-    position: relative; /*for the msg */
     display: flex !important;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: absolute;
+    top: 80px;
+    left: 300px;
     
 
 }
@@ -72,13 +64,32 @@ body{
 
 .phone_screen-msg{
 
-background-color: hsl(300, 21%, 88%);
-margin-bottom: 10px;
-font-size: 14px;
-border-radius: 10px;
-width: 80%;
-text-align: left;
+    background-color: hsl(300, 35%, 92%);
+    font-size: 14px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: left;
+    padding: 7px;
+    margin: 6px;
+    color: hsl(276, 55%, 52%);
+    /* Animation */
+    animation-name: toDown;
+    animation-duration: 1000ms;
+    transition-property: transform;
+    animation-timing-function: ease;
+    animation-delay: 500ms; 
 
+}
+
+
+@keyframes toDown{
+    
+    from{
+        transform:translateY(-50%) scale(0) ;
+    }
+    to{
+        transform: translateY(0%) scale(1);
+    }
 }
 
 .phone_screen_top{
@@ -86,37 +97,161 @@ text-align: left;
     background-image: linear-gradient(to left, hsl(293, 51%, 53%), hsl(264, 94%, 67%));
     border-radius: 25px 25px 10px 10px;
     margin-bottom: 10px;
-    height: 70px;
-   
-    
- 
+    margin-top: 35px;
+    padding: 10px;
+    height: 75px;
+    position: relative;
+    color: white;
+    display: flex;
+}
+.phone_screen_top h6{
+    color: hsl(276, 100%, 81%);
+}
+.phone_screen_top h4{
+    padding-top: 10px;
+}
+.phone_screen_top .profile-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    margin-right: 20px; 
+    margin-left: 10px;
 }
 
-/* .phone_screen_top h3::before{
-    content:' ';
-    background:  url('/images/avatar.jpg'); 
-    height: 10px;
-    width: 10px;
-} */
 div .client-msg{
     background-color: white;
     width: 65%;
-    /* position: absolute;
-    right: 0; */
+    position: calc(100%-50px);
+    right: calc(100%-50px);
+    transition: 0s transform ease-in ;
+    transform: translateX(45%);
+    color: hsl(271, 15%, 43%);
+      /* Animation */
+      animation-name: toDownC;
+      animation-duration: 1000ms;
+      transition-property: transform;
+      animation-timing-function: ease;
+      animation-delay: 500ms;
+      animation-direction: alternate;
 }
-.phone_screen-bid{
-    background-image: linear-gradient(to right, hsl(293, 60%, 55%), hsl(264, 84%, 63%));
+
+.img-client_msg{
+    display: flex;
+    flex-basis: 10px;
+    background-color: unset;
+    background-color: none;
+    transition: 0s transform ease-in ;
+    transform: translateX(45%);
+    margin:10px;
+    margin-right: 50px;
+    /* Animation */
+    animation-name: toDownC;
+    animation-duration: 1000ms;
+    transition-property: transform;
+    animation-timing-function: ease;
+    animation-delay: 500ms;
+    animation-direction: alternate;
+    
+}
+@keyframes toDownC{
+    
+    from{
+        transform:translateY(50%) translateX(45%) scale(0) ;
+    }
+    to{
+        transform: translateY(0%) translateX(45%)  scale(1);
+    }
+}
+.img-client_msg img{
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
-    height: 30px;
-    width: 85%;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+    
+  
+
+}
+
+.phone_screen-price{
+    background-image: linear-gradient(to right, hsl(293, 60%, 55%), hsl(264, 84%, 63%));
+    color: hsl(206, 6%, 79%);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 11px;
+}
+
+.half-hour::after{
+    content: ' $29';
+    color: white;
+    font-size: 18px;
+
+}
+.hour::after{
+    content: ' $49';
+    color: white;
+    font-size: 20px;
+
+}
+
+.input_container{
+    position: relative;
 }
 input[type="text"]{
     border-radius: 30px;
     height: 35px;
     margin-top: 10px;
     border: none;
-    position: absolute;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 20px;
     bottom: 2%;
     left: 3%;
-    width: 225px;
+    width: 300px;
+ }
+
+ button[type="submit"]{
+    position: absolute;
+    z-index: 1;
+    top: 9px;
+    left: 270px;
+    width:25px; height: 25px;
+    background-color: #280774;
+    border-radius: 40px;
+    padding: 3px;
+    border: none; cursor:pointer;
+    color: whitesmoke;
+    font-size: 16px;
+
+ } 
+
+
+ /* Second part */
+
+ .instructions{
+    color: hsl(270, 7%, 64%);
+    position: absolute;
+    top: 250px;
+    left: 750px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    text-align: justify;
+    align-items: flex-start;
+
+}
+ .instructions h1{
+     color: hsl(271, 36%, 24%);
+
+ }
+ .instructions p{
+    line-height: 24pt;
+    text-align: justify;
+    text-align-last: left;
  }
